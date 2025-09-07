@@ -171,4 +171,39 @@ public class lista1 {
 
         input.close();
     }
+
+    public static void questao10() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Digite o primeiro número inteiro: ");
+        int numero1 = input.nextInt();
+
+        System.out.print("Digite o segundo número inteiro: ");
+        int numero2 = input.nextInt();
+
+        System.out.println("\n--- Relacionamentos entre os números ---");
+
+        if (numero1 == numero2) {
+            System.out.println("Igual");
+        } else {
+            System.out.println("Não igual");
+        }
+
+        if (numero1 > numero2) {
+            System.out.println("Maior");
+        }
+
+        if (numero1 < numero2) {
+            System.out.println("Menor");
+        }
+
+        if (numero1 >= numero2) {
+            System.out.println("Maior ou igual");
+        }
+
+        if (numero1 <= numero2) {
+            System.out.println("Menor ou igual");
+        }
+
+        input.close();
+    }
 }
