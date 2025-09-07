@@ -1,7 +1,14 @@
-import java.util.Scanner;
 
+//     Aluna: Paulo Gabriel Vieira De Souza Paiva
+//     Professor: Bruno Borges da Silva
+//     Turma: Programação Orientada a Objetos (PEX0130)
+//     Curso: Bacharelado em Tecnologia da Informação - BTI
+//     Lista 1 - Exercícios de Fixação
+
+import java.util.Scanner;
 public class lista1 {
 
+    //Nível 1:
     public static void main(String[] args) {
         questao4();
     }
@@ -203,6 +210,71 @@ public class lista1 {
         if (numero1 <= numero2) {
             System.out.println("Menor ou igual");
         }
+
+        input.close();
+    }
+
+    //Nível 2:
+
+    public static void questao01() {
+        Scanner input = new Scanner(System.in);
+
+        int valor1, valor2, auxiliar;
+
+        System.out.print("Digite o primeiro e o segundo valor:");
+        valor1 = input.nextInt();
+        valor2 = input.nextInt();
+
+        System.out.printf("Valores antes da troca:\nValor1 = %d\nValor2 = %d\n", valor1, valor2);
+
+        auxiliar = valor1;
+        valor1 = valor2;
+        valor2 = auxiliar;
+
+        System.out.printf("Valores após a troca:\nValor1 = %d\nValor2 = %d\n", valor1, valor2);
+
+        input.close();
+    }
+
+    public static void questao02() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        int numero = input.nextInt();
+
+        int modulo;
+        if (numero >= 0) {
+            modulo = numero;
+        } else {
+            modulo = numero * -1;
+        }
+
+        System.out.printf("O módulo do número %d é: %d%n", numero, modulo);
+
+        input.close();
+    }
+
+    public static void questao03() {
+        Scanner input = new Scanner(System.in);
+
+        int[] numeros = new int[5];
+        System.out.println("Digite cinco números inteiros:");
+        for (int i = 0; i < 5; i++) {
+            numeros[i] = input.nextInt();
+        }
+
+        for (int i = 0; i < numeros.length - 1; i++) {
+            for (int j = i + 1; j < numeros.length; j++) {
+                if (numeros[i] > numeros[j]) {
+                    int temp = numeros[i];
+                    numeros[i] = numeros[j];
+                    numeros[j] = temp;
+                }
+            }
+        }
+
+        System.out.printf("Ordem crescente: %d %d %d %d %d%n", numeros[0], numeros[1], numeros[2], numeros[3], numeros[4]);
+        System.out.printf("Ordem decrescente: %d %d %d %d %d%n", numeros[4], numeros[3], numeros[2], numeros[1], numeros[0]);
 
         input.close();
     }
