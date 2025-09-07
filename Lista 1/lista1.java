@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class lista1 {
 
     public static void main(String[] args) {
-        questao1();
+        questao4();
     }
 
     public static void questao1() {
@@ -149,6 +149,25 @@ public class lista1 {
         double volume = 3.14159 * raio * raio * altura;
 
         System.out.printf("%nO volume da lata de óleo é: %.2f em centímetros quadrados.", volume);
+
+        input.close();
+    }
+
+    public static void questao9() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Informe sua idade em anos: ");
+        int idadeAnos = input.nextInt();
+
+        System.out.print("Informe quantos meses: ");
+        int idadeMeses = input.nextInt();
+
+        System.out.print("Informe quantos dias: ");
+        int idadeDiasExtras = input.nextInt();
+        
+        int idadeTotalEmDias = (idadeAnos * 365) + (idadeMeses * 30) + idadeDiasExtras;
+
+        System.out.printf("%nVocê já viveu %d dias.%n", idadeTotalEmDias);
 
         input.close();
     }
