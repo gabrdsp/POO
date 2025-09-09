@@ -1,5 +1,4 @@
-
-//     Aluna: Paulo Gabriel Vieira De Souza Paiva
+//     Aluno: Paulo Gabriel Vieira De Souza Paiva
 //     Professor: Bruno Borges da Silva
 //     Turma: Programação Orientada a Objetos (PEX0130)
 //     Curso: Bacharelado em Tecnologia da Informação - BTI
@@ -8,30 +7,27 @@
 import java.util.Scanner;
 public class lista1 {
 
-    //Nível 1:
+    static Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
-        questao4();
+        questao1();
     }
 
-    public static void questao1() {
-        Scanner input = new Scanner(System.in);
+    // --- Nível 1 ---
 
+    public static void questao1() {
         System.out.print("Digite a quantidade mínima da sua peça: ");
         int qMinima = input.nextInt();
 
         System.out.print("Digite a quantidade máxima da sua peça: ");
         int qMaxima = input.nextInt();
 
-        double qMedia = (qMinima + qMaxima) / 2;
+        double qMedia = (qMinima + qMaxima) / 2.0;
 
         System.out.printf("%nO estoque médio da peça é: %.2f%n", qMedia);
-
-        input.close();
     }
 
     public static void questao2() {
-        Scanner input = new Scanner(System.in);
-
         System.out.print("Qual é a atual cotação do dólar? ");
         float cotacao = input.nextFloat();
 
@@ -40,48 +36,40 @@ public class lista1 {
 
         float saldoBRL = cotacao * saldoUSS;
 
-        System.out.printf("Seu montante em dólares vale R$%f.", saldoBRL);
-
-        input.close();
+        System.out.printf("Seu montante em dólares vale R$%.2f.%n", saldoBRL);
     }
 
     public static void questao3() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.print("Informe o código ID do vendedor: ");
-        int idVendedor = scanner.nextInt();
+        int idVendedor = input.nextInt();
 
         System.out.print("Informe o código do produto: ");
-        int idProduto = scanner.nextInt();
+        int idProduto = input.nextInt();
 
         System.out.print("Informe o preço unitário do produto: ");
-        float precoUnitario = scanner.nextFloat();
+        float precoUnitario = input.nextFloat();
 
         System.out.print("Informe a quantidade vendida: ");
-        int quantidadeVendida = scanner.nextInt();
+        int quantidadeVendida = input.nextInt();
 
         float valorVenda = precoUnitario * quantidadeVendida;
 
         System.out.printf("%nO valor total da venda do produto %d é R$ %.2f%n", idProduto, valorVenda);
         System.out.printf("Vendedor %d, sua comissão será de R$ %.2f%n", idVendedor, (valorVenda * 0.05));
-
-        scanner.close();
     }
 
     public static void questao4() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.print("Digite o primeiro valor (A): ");
-        int a = scanner.nextInt();
+        int a = input.nextInt();
 
         System.out.print("Digite o segundo valor (B): ");
-        int b = scanner.nextInt();
+        int b = input.nextInt();
 
         System.out.print("Digite o terceiro valor (C): ");
-        int c = scanner.nextInt();
+        int c = input.nextInt();
 
         System.out.print("Digite o quarto valor (D): ");
-        int d = scanner.nextInt();
+        int d = input.nextInt();
 
         System.out.println("\n--- Resultados das adições ---");
         System.out.println("A + B = " + (a + b));
@@ -98,13 +86,9 @@ public class lista1 {
         System.out.println("B * C = " + (b * c));
         System.out.println("B * D = " + (b * d));
         System.out.println("C * D = " + (c * d));
-
-        scanner.close();
     }
 
     public static void questao5() {
-        Scanner input = new Scanner(System.in);
-
         System.out.print("Quantas horas levou a viagem? ");
         float tempo = input.nextFloat();
 
@@ -117,36 +101,23 @@ public class lista1 {
         System.out.printf("Tempo total: %.2f horas.\n", tempo);
         System.out.printf("Distância total: %.2f km.\n", distancia);
         System.out.printf("Combustível gasto durante a viagem: %.2f L. \n", litros);
-
-        input.close();
     }
 
     public static void questao6() {
-        Scanner input = new Scanner(System.in);
-
         System.out.print("Digite a temperatura em Graus Celsius? ");
         float temperatura = input.nextFloat();
 
-        System.out.printf("Essa temperatura em Fahrenheit é %.2f ºF.", ((9 * temperatura + 160) / 5));
-
-        input.close();
-
+        System.out.printf("Essa temperatura em Fahrenheit é %.2f ºF.%n", ((9 * temperatura + 160) / 5));
     }
 
     public static void questao7() {
-        Scanner input = new Scanner(System.in);
-
         System.out.print("Digite a temperatura atual em Graus Fahrenheit? ");
         float temperatura = input.nextFloat();
 
-        System.out.printf("A temperatura em Celsius é %.2f ºC.", ((temperatura - 32) * 5 / 9));
-
-        input.close();
+        System.out.printf("A temperatura em Celsius é %.2f ºC.%n", ((temperatura - 32) * 5 / 9));
     }
 
     public static void questao8() {
-        Scanner input = new Scanner(System.in);
-
         System.out.print("Informe em centímetros o raio da lata: ");
         float raio = input.nextFloat();
 
@@ -155,14 +126,10 @@ public class lista1 {
 
         double volume = 3.14159 * raio * raio * altura;
 
-        System.out.printf("%nO volume da lata de óleo é: %.2f em centímetros quadrados.", volume);
-
-        input.close();
+        System.out.printf("%nO volume da lata de óleo é: %.2f em centímetros cúbicos.%n", volume);
     }
 
     public static void questao9() {
-        Scanner input = new Scanner(System.in);
-
         System.out.print("Informe sua idade em anos: ");
         int idadeAnos = input.nextInt();
 
@@ -171,16 +138,13 @@ public class lista1 {
 
         System.out.print("Informe quantos dias: ");
         int idadeDiasExtras = input.nextInt();
-        
+
         int idadeTotalEmDias = (idadeAnos * 365) + (idadeMeses * 30) + idadeDiasExtras;
 
         System.out.printf("%nVocê já viveu %d dias.%n", idadeTotalEmDias);
-
-        input.close();
     }
 
     public static void questao10() {
-        Scanner input = new Scanner(System.in);
         System.out.print("Digite o primeiro número inteiro: ");
         int numero1 = input.nextInt();
 
@@ -210,53 +174,34 @@ public class lista1 {
         if (numero1 <= numero2) {
             System.out.println("Menor ou igual");
         }
-
-        input.close();
     }
 
-    //Nível 2:
+    // --- Nível 1 ---
 
-    public static void questao01() {
-        Scanner input = new Scanner(System.in);
-
-        int valor1, valor2, auxiliar;
-
-        System.out.print("Digite o primeiro e o segundo valor:");
-        valor1 = input.nextInt();
-        valor2 = input.nextInt();
+    public static void questao11() {
+        System.out.print("Digite o primeiro e o segundo valor: ");
+        int valor1 = input.nextInt();
+        int valor2 = input.nextInt();
 
         System.out.printf("Valores antes da troca:\nValor1 = %d\nValor2 = %d\n", valor1, valor2);
 
-        auxiliar = valor1;
+        int auxiliar = valor1;
         valor1 = valor2;
         valor2 = auxiliar;
 
         System.out.printf("Valores após a troca:\nValor1 = %d\nValor2 = %d\n", valor1, valor2);
-
-        input.close();
     }
 
-    public static void questao02() {
-        Scanner input = new Scanner(System.in);
-
+    public static void questao12() {
         System.out.print("Digite um número inteiro: ");
         int numero = input.nextInt();
 
-        int modulo;
-        if (numero >= 0) {
-            modulo = numero;
-        } else {
-            modulo = numero * -1;
-        }
+        int modulo = (numero >= 0) ? numero : -numero;
 
         System.out.printf("O módulo do número %d é: %d%n", numero, modulo);
-
-        input.close();
     }
 
-    public static void questao03() {
-        Scanner input = new Scanner(System.in);
-
+    public static void questao13() {
         int[] numeros = new int[5];
         System.out.println("Digite cinco números inteiros:");
         for (int i = 0; i < 5; i++) {
@@ -275,7 +220,165 @@ public class lista1 {
 
         System.out.printf("Ordem crescente: %d %d %d %d %d%n", numeros[0], numeros[1], numeros[2], numeros[3], numeros[4]);
         System.out.printf("Ordem decrescente: %d %d %d %d %d%n", numeros[4], numeros[3], numeros[2], numeros[1], numeros[0]);
+    }
 
-        input.close();
+    public static void questao14() {
+        System.out.print("Informe o primeiro valor: ");
+        int x = input.nextInt();
+        System.out.print("Informe o segundo valor: ");
+        int y = input.nextInt();
+
+        int dif = Math.abs(x - y);
+        System.out.printf("A diferença entre eles é: %d%n", dif);
+    }
+
+    public static void questao15() {
+        System.out.print("Nota 1: ");
+        float n1 = input.nextFloat();
+
+        System.out.print("Nota 2: ");
+        float n2 = input.nextFloat();
+
+        System.out.print("Nota 3: ");
+        float n3 = input.nextFloat();
+
+        System.out.print("Nota 4: ");
+        float n4 = input.nextFloat();
+
+        float mediaParcial = (n1 + n2 + n3 + n4) / 4;
+
+        if (mediaParcial >= 7) {
+            System.out.printf("Média %.2f → aprovado!%n", mediaParcial);
+        } else {
+            System.out.printf("Média %.2f → recuperação.%n", mediaParcial);
+            System.out.print("Digite a nota extra: ");
+            float rec = input.nextFloat();
+
+            float mediaFinal = (mediaParcial + rec) / 2;
+
+            if (mediaFinal >= 7) {
+                System.out.printf("Nova média %.2f → aprovado na recuperação!%n", mediaFinal);
+            } else {
+                System.out.printf("Nova média %.2f → reprovado!%n", mediaFinal);
+            }
+        }
+    }
+
+    public static void questao16() {
+        System.out.print("Primeiro número: ");
+        float v1 = input.nextFloat();
+
+        System.out.print("Segundo número: ");
+        float v2 = input.nextFloat();
+
+        if (v1 == v2) {
+            System.out.println("Os dois valores são iguais.");
+        } else if (v1 > v2) {
+            System.out.printf("Maior: %.2f | Menor: %.2f%n", v1, v2);
+        } else {
+            System.out.printf("Maior: %.2f | Menor: %.2f%n", v2, v1);
+        }
+    }
+
+    public static void questao17() {
+        System.out.print("Digite um número entre 0 e 9: ");
+        int valor = input.nextInt();
+
+        if (valor >= 0 && valor <= 9) {
+            System.out.println("valor válido");
+        } else if (valor >= -1000 && valor <= 1000) {
+            System.out.println("valor inválido");
+        } else {
+            System.out.println("erro");
+        }
+    }
+
+    public static void questao18() {
+        System.out.print("Informe o código: ");
+        int cod = input.nextInt();
+
+        switch (cod) {
+            case 1:
+                System.out.println("um");
+                break;
+            case 2:
+                System.out.println("dois");
+                break;
+            case 3:
+                System.out.println("três");
+                break;
+            default:
+                System.out.println("Código inválido!");
+        }
+    }
+
+    public static void questao19() {
+        System.out.print("Lado A: ");
+        float la = input.nextFloat();
+        System.out.print("Lado B: ");
+        float lb = input.nextFloat();
+        System.out.print("Lado C: ");
+        float lc = input.nextFloat();
+
+        if ((la < lb + lc) && (lb < la + lc) && (lc < la + lb)) {
+            if (la == lb && lb == lc) {
+                System.out.println("Equilátero");
+            } else if (la == lb || la == lc || lb == lc) {
+                System.out.println("Isósceles");
+            } else {
+                System.out.println("Escaleno");
+            }
+        } else {
+            System.out.println("Não é um triângulo válido.");
+        }
+    }
+
+    public static void questao20() {
+        int a, b, c;
+        do {
+            System.out.print("Digite o valor de A (>0): ");
+            a = input.nextInt();
+        } while (a <= 0);
+        do {
+            System.out.print("Digite o valor de B (>0): ");
+            b = input.nextInt();
+        } while (b <= 0);
+        do {
+            System.out.print("Digite o valor de C (>0): ");
+            c = input.nextInt();
+        } while (c <= 0);
+
+        int menor = Math.min(a, Math.min(b, c));
+        int maior = Math.max(a, Math.max(b, c));
+
+        System.out.printf("Menor * Maior = %d%n", (menor * maior));
+        System.out.printf("Maior / Menor = %.2f%n", (float) maior / menor);
+    }
+
+    public static void questao21() {
+        System.out.print("Informe um número: ");
+        int entrada = input.nextInt();
+
+        if (entrada >= 0) {
+            System.out.printf("%d é positivo.%n", entrada);
+        } else {
+            System.out.printf("%d é negativo.%n", entrada);
+        }
+    }
+
+    public static void questao22() {
+        int pos = 0;
+        int neg = 0;
+
+        System.out.print("Forneça um número: ");
+        int entrada = input.nextInt();
+
+        if (entrada >= 0) {
+            pos = entrada;
+        } else {
+            neg = entrada;
+        }
+
+        System.out.printf("Positivo: %d | Negativo: %d%n", pos, neg);
     }
 }
