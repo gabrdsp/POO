@@ -1,7 +1,7 @@
 // Questao2.java
 import java.util.Scanner;
 
-public class Questao2 {
+public class Questao02 {
 
     public static void run() {
         Scanner sc = new Scanner(System.in);

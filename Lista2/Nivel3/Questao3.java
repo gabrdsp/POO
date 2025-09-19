@@ -6,7 +6,7 @@ public class Questao3 {
 
     public static void run() {
         Scanner sc = new Scanner(System.in);
-        sc.useLocale(Locale.US); // <- aceita ponto como separador decimal
+        sc.useLocale(Locale.US);
 
         System.out.println("Cálculo do Peso Ideal");
         System.out.print("Digite sua altura (em metros, ex: 1.75): ");
