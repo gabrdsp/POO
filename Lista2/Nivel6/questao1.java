@@ -1,4 +1,4 @@
-// Questao1.java
+// Questao1.javajava
 import java.util.Scanner;
 
 public class questao1 {
